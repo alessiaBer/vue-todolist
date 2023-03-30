@@ -15,7 +15,11 @@
         <h1>TODO List</h1>
         <div class="add_task">
             <div class="input-group flex-nowrap">
-                <input type="text" class="form-control" placeholder="Add a task.." v-model="newTask">
+                <input type="text" 
+                class="form-control" 
+                placeholder="Add a task.." 
+                v-model="newTask"
+                @keyup.enter="addTask()">
                 <span class="input-group-text" @click="addTask()">
                     <i class="fa-solid fa-plus"></i>
                 </span>

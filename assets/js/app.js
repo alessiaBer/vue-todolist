@@ -49,7 +49,11 @@ createApp({
                 text: this.newTask,
                 done:false
             }
-            this.tasks.unshift(new_task)
+            if (new_task.text.length >= 5 ) {
+                this.tasks.unshift(new_task)
+            } else {
+                alert('Your task must contain at least 5 characters')
+            }
             this.newTask = ''
         },
         removeTask(index) {
