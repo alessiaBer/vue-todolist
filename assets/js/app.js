@@ -18,7 +18,28 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            
+            tasks: [
+                {
+                    text: 'Learn HTML & CSS',
+                    done: true
+                },
+                {
+                    text: 'Learn JS and Vue.js',
+                    done: false
+                },
+                {
+                    text: 'Learn PHP & Laravel',
+                    done: false
+                },
+                {
+                    text: 'Do Final Project',
+                    done: false
+                },
+                {
+                    text: 'Find a job as developer',
+                    done: false
+                }
+            ]
         }
     }
 }).mount('#app')

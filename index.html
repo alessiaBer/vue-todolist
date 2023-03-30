@@ -13,6 +13,13 @@
     
     <div id="app">
         <h1>TODO List</h1>
+        <div class="todo_list">
+            <h3>To do:</h3>
+            <ul v-if="tasks.length > 0">
+                <li v-for="(task, index) in tasks">{{tasks[index].text}}</li>
+            </ul>
+            <p v-else>You have 0 tasks to do</p>
+        </div>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
