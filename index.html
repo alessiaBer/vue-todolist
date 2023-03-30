@@ -16,7 +16,7 @@
         <div class="todo_list">
             <h3>To do:</h3>
             <ul v-if="tasks.length > 0">
-                <li v-for="(task, index) in tasks">{{tasks[index].text}}</li>
+                <li :class="tasks[index].done === true ? 'done' : ''" v-for="(task, index) in tasks">{{tasks[index].text}}</li>
             </ul>
             <p v-else>You have 0 tasks to do</p>
         </div>
