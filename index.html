@@ -33,6 +33,9 @@
                             <i class="fa-solid fa-plus"></i>
                         </span>
                     </div>
+                    <div class="alert alert-danger" role="alert" v-if="error !== ''">
+                        {{error}}
+                    </div>
                 </div>
                 <div class="card todo_list my-3">
                     <div class="card-header">

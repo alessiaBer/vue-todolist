@@ -40,7 +40,8 @@ createApp({
                     text: 'Find a job as developer',
                     done: false
                 }
-            ]
+            ],
+            error: ''
         }
     },
     methods: {
@@ -52,7 +53,8 @@ createApp({
             if (new_task.text.length >= 5 ) {
                 this.tasks.unshift(new_task)
             } else {
-                alert('Your task must contain at least 5 characters')
+                this.error = 'Sorry! Your task must contain at least 5 characters'
+                setTimeout(this.removeError, 3000)
             }
             this.newTask = ''
         },
@@ -61,6 +63,9 @@ createApp({
         },
         is_done(i) {
             this.tasks[i].done = !this.tasks[i].done
+        },
+        removeError() {
+            this.error = ''
         }
     }
 }).mount('#app')
