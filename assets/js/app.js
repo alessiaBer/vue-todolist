@@ -58,6 +58,9 @@ createApp({
         },
         removeTask(index) {
             this.tasks.splice(index, 1);
+        },
+        is_done(i) {
+            this.tasks[i].done = !this.tasks[i].done
         }
     }
 }).mount('#app')

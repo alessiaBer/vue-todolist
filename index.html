@@ -28,10 +28,12 @@
         <div class="todo_list">
             <h3>To do:</h3>
             <ul v-if="tasks.length > 0">
-                <li 
-                :class="task.done === true ? 'done' : ''" 
-                v-for="(task, index) in tasks">
-                    {{task.text}}
+                <li v-for="(task, index) in tasks">
+                    <span
+                    :class="task.done === true ? 'done' : ''" 
+                    @click="is_done(index)">
+                        {{task.text}}
+                    </span>
                     <i class="fa-regular fa-circle-xmark px-2 text-danger" @click="removeTask(index)"></i>
                 </li>
             </ul>

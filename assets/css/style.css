@@ -1,3 +1,7 @@
-li.done {
+span.done {
     text-decoration: line-through;
+}
+
+li > span {
+    cursor: pointer;
 }
