@@ -18,6 +18,11 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            newTask: {
+                text:'',
+                done: false
+            },
+            done: false,
             tasks: [
                 {
                     text: 'Learn HTML & CSS',
@@ -43,6 +48,9 @@ createApp({
         }
     },
     methods: {
+        addTask() {
+            this.tasks.unshift(this.newTask)
+        },
         removeTask(index) {
             this.tasks.splice(index, 1);
         }
